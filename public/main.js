@@ -40,7 +40,6 @@ function submit(){
     });
 
     socket.on("connect_error", (err) => {
-      alert(err.message);
     });
     document.getElementById("input").disabled = true;
   }
