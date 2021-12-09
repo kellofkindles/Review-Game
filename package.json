@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "node": "^16.6.1"
+  },
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "socket.io": "^4.4.0"
+  },
+  "name": "review-game",
+  "version": "1.0.0",
+  "description": "Review Game with clues and scores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellofkindles/Review-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kellofkindles/Review-Game/issues"
+  },
+  "homepage": "https://github.com/kellofkindles/Review-Game#readme"
+}
