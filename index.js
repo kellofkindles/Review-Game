@@ -10,6 +10,7 @@ let questions = require("./questions.json");
 let answer;
 let clues;
 let users = {};
+let host;
 
 function game(host) {
   // Creates a new array of "_" that's the length of the clue
@@ -95,6 +96,7 @@ io.on("connection", (socket) => {
   console.log(socket.handshake.auth.username || socket.handshake.auth.host);
   if(!socket.handshake.auth.host){
     users[socket.handshake.auth.username] = 0;
+    host.emit("leaderboard",Object.entries(users));
     console.log(users)
     socket.on("guess", (data) => {
       if(data.toLowerCase() === answer){
@@ -104,6 +106,8 @@ io.on("connection", (socket) => {
         socket.emit("wrong");
       }
     });
+  } else{
+    host = socket;
   }
   
 

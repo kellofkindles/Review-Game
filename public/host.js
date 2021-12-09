@@ -26,6 +26,10 @@ socket.on("connect_error", (err) => {
 });
 
 function startGame() {
-  document.getElementById("startButton").remove();
   socket.emit("start");
 }
+document.addEventListener("keyup", function (e) {
+  if(e.key === "Enter" && !started){
+    startGame()
+  }
+});
